@@ -1,0 +1,19 @@
+name: crates.io Deployment
+'on':
+  push:
+    branches:
+      - 'main'
+  pull_request: null
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download Repository
+        uses: actions/checkout@v1
+
+      - name: Cargo Login
+        run: cargo login ${{ secrets.CRATES_IO_API_KEY }}
+
+      - name: Publish Crate
+        run: cargo publish
