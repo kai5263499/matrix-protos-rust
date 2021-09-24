@@ -1,9 +1,7 @@
-name: crates.io Deployment
-'on':
+on:
   push:
     tags:        
       - '*'
-  pull_request: null
 jobs:
   deploy:
     name: Deploy
