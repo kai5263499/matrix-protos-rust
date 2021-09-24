@@ -1,6 +1,6 @@
 [package]
 name = "matrix-protos-rust"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2018"
 license = "Apache-2.0/MIT"
 readme = "README.md"
@@ -10,6 +10,11 @@ description = "Rust protobuf bindings for interacting with matrix-io devices"
 
 [dependencies]
 protobuf = "2.25.1"
+
+[dev-dependencies]
+protobuf = "2.25.1"
+rand = "0.8.4"
+zmq = "0.9"
 
 [build-dependencies]
 protobuf-codegen-pure = "2.25.1"
